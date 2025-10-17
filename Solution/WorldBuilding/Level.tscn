@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://kxrmmd5eyav8"]
+
+[ext_resource type="PackedScene" uid="uid://0w8qp1rddvvt" path="res://Solution/WorldBuilding/OverWorldMap.tscn" id="1_vhudf"]
+[ext_resource type="PackedScene" uid="uid://cgn0rrhwtt8ci" path="res://Solution/WorldBuilding/Buildings/House1.tscn" id="2_afjxm"]
+
+[node name="Level" type="Node2D"]
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_vhudf")]
+
+[node name="House1_1" parent="." instance=ExtResource("2_afjxm")]
+position = Vector2(192, 96)
+
+[node name="House1_2" parent="." instance=ExtResource("2_afjxm")]
+position = Vector2(576, 96)
+
+[node name="House1_3" parent="." instance=ExtResource("2_afjxm")]
+position = Vector2(448, 96)
+
+[node name="House1_4" parent="." instance=ExtResource("2_afjxm")]
+position = Vector2(320, 96)

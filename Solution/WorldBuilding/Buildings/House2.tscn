@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxcxoclyns0wd"]
+
+[ext_resource type="PackedScene" uid="uid://ukvgkxwddvm5" path="res://Solution/WorldBuilding/Buildings/GeneralBuilding.tscn" id="1_vmtuk"]
+[ext_resource type="Texture2D" uid="uid://c3p8brc64matw" path="res://Solution/WorldBuilding/Assets/Buildings/House2.png" id="2_ing5e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7nyq"]
+size = Vector2(130, 150)
+
+[node name="House2" instance=ExtResource("1_vmtuk")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ing5e")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_e7nyq")

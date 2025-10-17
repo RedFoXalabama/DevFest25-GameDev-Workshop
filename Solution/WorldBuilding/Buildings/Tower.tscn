@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://rl153jcqix3b"]
+
+[ext_resource type="PackedScene" uid="uid://ukvgkxwddvm5" path="res://Solution/WorldBuilding/Buildings/GeneralBuilding.tscn" id="1_0u7ph"]
+[ext_resource type="Texture2D" uid="uid://bq3imwivi5n80" path="res://Solution/WorldBuilding/Assets/Buildings/Tower.png" id="2_8heem"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0grf"]
+size = Vector2(120, 180)
+
+[node name="Tower" instance=ExtResource("1_0u7ph")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_8heem")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_f0grf")

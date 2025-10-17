@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://chl52fql24j05"]
+
+[ext_resource type="PackedScene" uid="uid://ukvgkxwddvm5" path="res://Solution/WorldBuilding/Buildings/GeneralBuilding.tscn" id="1_v3xeu"]
+[ext_resource type="Texture2D" uid="uid://d0841kpgr7p5" path="res://Solution/WorldBuilding/Assets/Buildings/Castle.png" id="2_xq2mv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmh58"]
+size = Vector2(315, 215)
+
+[node name="Castle" instance=ExtResource("1_v3xeu")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_xq2mv")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_rmh58")
