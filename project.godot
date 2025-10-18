@@ -12,7 +12,7 @@ config_version=5
 
 config/name="DevFest25 GameDev Workshop"
 run/main_scene="uid://kxrmmd5eyav8"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [dotnet]
@@ -22,6 +22,7 @@ project/assembly_name="DevFest25 GameDev Workshop"
 [file_customization]
 
 folder_colors={
+"res://Solution/CombatSystem/": "red",
 "res://Solution/WorldBuilding/": "green"
 }
 

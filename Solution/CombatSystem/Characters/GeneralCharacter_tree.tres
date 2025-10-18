@@ -1,0 +1,74 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=20 format=3 uid="uid://dc1g72ve1fawi"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xu4sk"]
+animation = &"Attack1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dlmyr"]
+animation = &"Attack2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tmk8h"]
+animation = &"Guard"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f1hqg"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j5uyx"]
+animation = &"Run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n7tw3"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rfr4i"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4kuym"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4p7t4"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xcxrk"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8cgkx"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g6vrp"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ws0f7"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gbqrj"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ueaw2"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_negdo"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_o5hws"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r3nqk"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n2y75"]
+advance_mode = 2
+
+[resource]
+states/Attack1/node = SubResource("AnimationNodeAnimation_xu4sk")
+states/Attack1/position = Vector2(449, 35)
+states/Attack2/node = SubResource("AnimationNodeAnimation_dlmyr")
+states/Attack2/position = Vector2(449, 182)
+states/End/position = Vector2(739, 103)
+states/Guard/node = SubResource("AnimationNodeAnimation_tmk8h")
+states/Guard/position = Vector2(324, 238)
+states/Idle/node = SubResource("AnimationNodeAnimation_f1hqg")
+states/Idle/position = Vector2(324, 103)
+states/Run/node = SubResource("AnimationNodeAnimation_j5uyx")
+states/Run/position = Vector2(558, 103)
+states/Start/position = Vector2(191, 103)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_n7tw3"), "Idle", "Attack1", SubResource("AnimationNodeStateMachineTransition_rfr4i"), "Attack1", "Attack2", SubResource("AnimationNodeStateMachineTransition_4kuym"), "Idle", "Attack2", SubResource("AnimationNodeStateMachineTransition_4p7t4"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_xcxrk"), "Attack1", "Run", SubResource("AnimationNodeStateMachineTransition_8cgkx"), "Run", "Attack1", SubResource("AnimationNodeStateMachineTransition_g6vrp"), "Attack1", "Idle", SubResource("AnimationNodeStateMachineTransition_ws0f7"), "Attack2", "Idle", SubResource("AnimationNodeStateMachineTransition_gbqrj"), "Attack2", "Attack1", SubResource("AnimationNodeStateMachineTransition_ueaw2"), "Attack2", "Run", SubResource("AnimationNodeStateMachineTransition_negdo"), "Run", "Attack2", SubResource("AnimationNodeStateMachineTransition_o5hws"), "Guard", "Idle", SubResource("AnimationNodeStateMachineTransition_r3nqk"), "Idle", "Guard", SubResource("AnimationNodeStateMachineTransition_n2y75")]
+graph_offset = Vector2(-34, 78)

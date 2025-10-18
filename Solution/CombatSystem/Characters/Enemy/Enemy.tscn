@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxy5dcn6gbi3c"]
+
+[ext_resource type="PackedScene" uid="uid://n7ofclr8gokv" path="res://Solution/CombatSystem/Characters/GeneralCharacter.tscn" id="1_1nkss"]
+[ext_resource type="Texture2D" uid="uid://bpv2pqwp10xi8" path="res://Solution/CombatSystem/Characters/Assets/Enemy/BlackWarriorAnimations.png" id="2_s26kb"]
+
+[node name="Enemy" instance=ExtResource("1_1nkss")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_s26kb")
