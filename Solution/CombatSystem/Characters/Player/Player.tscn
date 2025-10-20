@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvbr15ptsk1h2"]
 
 [ext_resource type="PackedScene" uid="uid://n7ofclr8gokv" path="res://Solution/CombatSystem/Characters/GeneralCharacter.tscn" id="1_vsggt"]
-[ext_resource type="Texture2D" uid="uid://dciclvfb5kto0" path="res://Solution/CombatSystem/Characters/Assets/Player/RedWarriorAnimations.png" id="2_s43an"]
+[ext_resource type="Script" uid="uid://d1ceduq1r3jfd" path="res://Solution/CombatSystem/Characters/Player/player.gd" id="2_vsggt"]
 
 [node name="Player" instance=ExtResource("1_vsggt")]
+script = ExtResource("2_vsggt")
 
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_s43an")
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]

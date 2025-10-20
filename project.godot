@@ -19,11 +19,29 @@ config/icon="res://icon.svg"
 
 project/assembly_name="DevFest25 GameDev Workshop"
 
+[editor]
+
+movie_writer/ogv/encoding_speed=1
+movie_writer/movie_file="C:/RedFoX Studio/Creator/Godot Projects/devfest25-gamedev-workshop/render.avi"
+
 [file_customization]
 
 folder_colors={
 "res://Solution/CombatSystem/": "red",
 "res://Solution/WorldBuilding/": "green"
+}
+
+[input]
+
+attack={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":90,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+guard={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
 }
 
 [layer_names]
