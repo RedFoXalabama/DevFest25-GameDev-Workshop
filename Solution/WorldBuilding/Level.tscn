@@ -26,5 +26,5 @@ position = Vector2(480, 288)
 motion_mode = 0
 
 [node name="Player" parent="." instance=ExtResource("3_jbkhk")]
-position = Vector2(192, 288)
+position = Vector2(128, 384)
 motion_mode = 0

@@ -1,8 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bxy5dcn6gbi3c"]
-
-[ext_resource type="PackedScene" uid="uid://n7ofclr8gokv" path="res://Solution/CombatSystem/Characters/GeneralCharacter.tscn" id="1_1nkss"]
-[ext_resource type="Script" uid="uid://ch4hnp85jql4i" path="res://Solution/CombatSystem/Characters/Enemy/enemy.gd" id="2_3jqfy"]
-[ext_resource type="Texture2D" uid="uid://bpv2pqwp10xi8" path="res://Solution/CombatSystem/Characters/Assets/Enemy/BlackWarriorAnimations.png" id="2_s26kb"]
+[gd_resource type="AnimationNodeStateMachine" load_steps=38 format=3 uid="uid://ccmn1adym6hg5"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rfr4i"]
 animation = &"attack1_right"
@@ -34,39 +30,6 @@ blend_point_3/pos = Vector2(-0.1, 1)
 blend_point_4/node = SubResource("AnimationNodeAnimation_8cgkx")
 blend_point_4/pos = Vector2(-0.1, -1)
 blend_point_5/node = SubResource("AnimationNodeAnimation_g6vrp")
-blend_point_5/pos = Vector2(-1, 0)
-blend_mode = 1
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gbqrj"]
-animation = &"attack2_right"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ueaw2"]
-animation = &"attack1_right"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_negdo"]
-animation = &"attack2_right"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o5hws"]
-animation = &"attack2_left"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r3nqk"]
-animation = &"attack2_left"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n2y75"]
-animation = &"attack2_left"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_cy6cr"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_gbqrj")
-blend_point_0/pos = Vector2(0.1, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_ueaw2")
-blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_negdo")
-blend_point_2/pos = Vector2(0.1, -1)
-blend_point_3/node = SubResource("AnimationNodeAnimation_o5hws")
-blend_point_3/pos = Vector2(-0.1, 1)
-blend_point_4/node = SubResource("AnimationNodeAnimation_r3nqk")
-blend_point_4/pos = Vector2(-0.1, -1)
-blend_point_5/node = SubResource("AnimationNodeAnimation_n2y75")
 blend_point_5/pos = Vector2(-1, 0)
 blend_mode = 1
 
@@ -204,12 +167,10 @@ advance_expression = "!is_guarding && is_attacking"
 advance_mode = 2
 advance_expression = "!is_attacking && !is_guarding"
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_s26kb"]
+[resource]
 resource_local_to_scene = true
 states/Attack1/node = SubResource("AnimationNodeBlendSpace2D_ws0f7")
 states/Attack1/position = Vector2(523, 100)
-states/Attack2/node = SubResource("AnimationNodeBlendSpace2D_cy6cr")
-states/Attack2/position = Vector2(523, 184)
 states/Guard/node = SubResource("AnimationNodeBlendSpace2D_1a17j")
 states/Guard/position = Vector2(368, 26)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_1xakh")
@@ -217,24 +178,4 @@ states/Idle/position = Vector2(368, 100)
 states/Run/node = SubResource("AnimationNodeBlendSpace2D_xmnun")
 states/Run/position = Vector2(368, 184)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_xu4sk"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_dlmyr"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_tmk8h"), "Idle", "Guard", SubResource("AnimationNodeStateMachineTransition_4kuym"), "Guard", "Idle", SubResource("AnimationNodeStateMachineTransition_4p7t4"), "Idle", "Attack1", SubResource("AnimationNodeStateMachineTransition_f1hqg"), "Attack1", "Idle", SubResource("AnimationNodeStateMachineTransition_j5uyx"), "Run", "Attack1", SubResource("AnimationNodeStateMachineTransition_n7tw3"), "Attack1", "Run", SubResource("AnimationNodeStateMachineTransition_rfr4i")]
-graph_offset = Vector2(-113, -29)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_s26kb"]
-radius = 256.4995
-
-[node name="Enemy" instance=ExtResource("1_1nkss")]
-script = ExtResource("2_3jqfy")
-
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_s26kb")
-
-[node name="AnimationTree" parent="." index="5"]
-tree_root = SubResource("AnimationNodeStateMachine_s26kb")
-
-[node name="SearchArea" type="Area2D" parent="." index="6"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SearchArea" index="0"]
-shape = SubResource("CircleShape2D_s26kb")
-
-[connection signal="area_entered" from="HurtArea" to="." method="_on_hurt_area_area_entered"]
-[connection signal="body_entered" from="SearchArea" to="." method="_on_search_area_body_entered"]
+graph_offset = Vector2(89, 49)
