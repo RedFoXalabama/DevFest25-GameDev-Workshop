@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @export var animation_player := AnimationPlayer
+@export var life : int = 3
+@onready var animation_manager : AnimationManager = $AnimationManager
 
 const SPEED = 300.0
 
@@ -9,9 +11,6 @@ var is_attacking : bool
 var is_guarding : bool
 
 func _physics_process(delta: float) -> void:
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
 	if direction:
@@ -43,3 +42,15 @@ func guarding():
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "attack1_left" || "attack1_right":
 		is_attacking = false
+
+
+func _on_hurt_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("enemy hitbox"):
+		if life > 1: 
+			animation_manager.get_damage()
+			life -= 1
+		elif life == 1:
+			animation_manager.death_animation()
+
+func _on_animation_manager_death_signal() -> void:
+	pass

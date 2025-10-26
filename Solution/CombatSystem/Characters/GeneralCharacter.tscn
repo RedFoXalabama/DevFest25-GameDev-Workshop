@@ -4,10 +4,11 @@
 [ext_resource type="Script" uid="uid://bq056nik5pynv" path="res://Solution/CombatSystem/Characters/animation_manager.gd" id="2_dlmyr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xu4sk"]
+resource_local_to_scene = true
 size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlmyr"]
-size = Vector2(58, 104)
+size = Vector2(77, 132)
 
 [sub_resource type="Animation" id="Animation_n7tw3"]
 length = 0.001

@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://ukvgkxwddvm5"]
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="StaticBody2D"]
 collision_mask = 3
-input_pickable = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
