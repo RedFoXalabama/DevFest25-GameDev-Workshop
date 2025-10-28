@@ -1,11 +1,12 @@
 extends CharacterBody2D
+class_name Player
 
 @export var animation_player := AnimationPlayer
 @export var life : int = 3
 @onready var animation_manager : AnimationManager = $AnimationManager
 
 const SPEED = 300.0
-
+var can_move : bool = true
 var direction : Vector2
 var is_attacking : bool
 var is_guarding : bool
@@ -13,7 +14,7 @@ var is_guarding : bool
 func _physics_process(delta: float) -> void:
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
-	if direction:
+	if direction && can_move:
 		velocity.x = direction.x * SPEED
 		velocity.y = direction.y * SPEED
 	else:
@@ -26,6 +27,8 @@ func _physics_process(delta: float) -> void:
 	guarding()
 	move_and_slide()
 
+func set_can_move(value: bool):
+	can_move = value
 
 func attacking():
 	if Input.is_action_just_pressed("attack"):

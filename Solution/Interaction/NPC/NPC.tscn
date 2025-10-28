@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://dqjdx17g48viv"]
+
+[ext_resource type="Texture2D" uid="uid://cs4ha7s2i2hpg" path="res://Solution/Interaction/Assets/Monk_01.png" id="1_rq26e"]
+[ext_resource type="Script" uid="uid://h3sudh3f42q0" path="res://Solution/Interaction/NPC/npc.gd" id="1_uy301"]
+[ext_resource type="Texture2D" uid="uid://bhl43h8rwwugv" path="res://Solution/Interaction/Assets/Monk_02.png" id="2_k15mi"]
+[ext_resource type="Texture2D" uid="uid://bgc3dfe6wpl72" path="res://Solution/Interaction/Assets/Monk_03.png" id="3_uy301"]
+[ext_resource type="Texture2D" uid="uid://dh8d2jwuvx1r8" path="res://Solution/Interaction/Assets/Monk_04.png" id="4_2lbww"]
+[ext_resource type="Texture2D" uid="uid://bts8wxeh1x2y7" path="res://Solution/Interaction/Assets/Monk_05.png" id="5_55xvm"]
+[ext_resource type="Texture2D" uid="uid://ckk4nqql403js" path="res://Solution/Interaction/Assets/Monk_06.png" id="6_qr5wy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rq26e"]
+radius = 32.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_go37u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rq26e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_k15mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uy301")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2lbww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_55xvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qr5wy")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k15mi"]
+radius = 128.0
+
+[node name="NPC" type="StaticBody2D"]
+script = ExtResource("1_uy301")
+dialog = "Vai a sconfiggere il cavagliere nero
+perché?
+perché é NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rq26e")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_go37u")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.43337092
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_k15mi")
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

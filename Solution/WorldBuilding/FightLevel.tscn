@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjbt36gcksj5i"]
+
+[ext_resource type="PackedScene" uid="uid://0w8qp1rddvvt" path="res://Solution/WorldBuilding/OverWorldMap.tscn" id="1_d82qy"]
+[ext_resource type="PackedScene" uid="uid://dvbr15ptsk1h2" path="res://Solution/CombatSystem/Characters/Player/Player.tscn" id="2_yeoyg"]
+[ext_resource type="PackedScene" uid="uid://bxy5dcn6gbi3c" path="res://Solution/CombatSystem/Characters/Enemy/Enemy.tscn" id="3_l005a"]
+
+[node name="FightLevel" type="Node2D"]
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_d82qy")]
+
+[node name="Player" parent="." instance=ExtResource("2_yeoyg")]
+position = Vector2(272, 320)
+
+[node name="Enemy" parent="." instance=ExtResource("3_l005a")]
+position = Vector2(896, 320)
