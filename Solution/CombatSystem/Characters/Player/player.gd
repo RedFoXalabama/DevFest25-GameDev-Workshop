@@ -4,6 +4,7 @@ class_name Player
 @export var animation_player := AnimationPlayer
 @export var life : int = 3
 @onready var animation_manager : AnimationManager = $AnimationManager
+@onready var foot_steps : FootSteps = $FootSteps
 
 const SPEED = 300.0
 var can_move : bool = true
@@ -17,9 +18,11 @@ func _physics_process(delta: float) -> void:
 	if direction && can_move:
 		velocity.x = direction.x * SPEED
 		velocity.y = direction.y * SPEED
+		foot_steps.play()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+		foot_steps.stop()
 	velocity.normalized()
 	
 	

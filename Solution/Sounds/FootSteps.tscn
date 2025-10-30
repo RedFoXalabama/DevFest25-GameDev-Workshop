@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://vcoflov16g4p"]
+
+[ext_resource type="Script" uid="uid://64ejsry0hsv6" path="res://Solution/Sounds/foot_steps.gd" id="1_sil2b"]
+[ext_resource type="AudioStream" uid="uid://buwwnqay5gkgq" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_000.ogg" id="2_q6ug5"]
+[ext_resource type="AudioStream" uid="uid://h6i8nxflakp7" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_001.ogg" id="3_kr027"]
+[ext_resource type="AudioStream" uid="uid://cpcoxngyuep8u" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_002.ogg" id="4_geavk"]
+[ext_resource type="AudioStream" uid="uid://bdxt0ut0jixhu" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_003.ogg" id="5_gsghr"]
+[ext_resource type="AudioStream" uid="uid://mdmavto3fv4d" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_004.ogg" id="6_rtxp7"]
+
+[node name="FootSteps" type="Node"]
+script = ExtResource("1_sil2b")
+
+[node name="GrassStep0" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_q6ug5")
+bus = &"FootSteps"
+
+[node name="GrassStep1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kr027")
+bus = &"FootSteps"
+
+[node name="GrassStep2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_geavk")
+bus = &"FootSteps"
+
+[node name="GrassStep3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_gsghr")
+bus = &"FootSteps"
+
+[node name="GrassStep4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_rtxp7")
+bus = &"FootSteps"
+
+[connection signal="finished" from="GrassStep0" to="." method="_on_grass_step_0_finished"]
+[connection signal="finished" from="GrassStep1" to="." method="_on_grass_step_1_finished"]
+[connection signal="finished" from="GrassStep2" to="." method="_on_grass_step_2_finished"]
+[connection signal="finished" from="GrassStep3" to="." method="_on_grass_step_3_finished"]
+[connection signal="finished" from="GrassStep4" to="." method="_on_grass_step_4_finished"]
