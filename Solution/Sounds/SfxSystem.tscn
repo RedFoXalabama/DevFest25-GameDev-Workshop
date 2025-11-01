@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://vcoflov16g4p"]
+
+[ext_resource type="Script" uid="uid://64ejsry0hsv6" path="res://Solution/Sounds/SfxSystem.gd" id="1_gl7ll"]
+[ext_resource type="AudioStream" uid="uid://buwwnqay5gkgq" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_000.ogg" id="2_30v1n"]
+[ext_resource type="AudioStream" uid="uid://h6i8nxflakp7" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_001.ogg" id="3_2stu4"]
+[ext_resource type="AudioStream" uid="uid://cpcoxngyuep8u" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_002.ogg" id="4_qdu3e"]
+[ext_resource type="AudioStream" uid="uid://bdxt0ut0jixhu" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_003.ogg" id="5_gb6oy"]
+[ext_resource type="AudioStream" uid="uid://mdmavto3fv4d" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_004.ogg" id="6_wh1ff"]
+[ext_resource type="AudioStream" uid="uid://dqh4ie32olceb" path="res://Solution/Sounds/SwordHits/impactMetal_medium_000.ogg" id="7_mhr5l"]
+[ext_resource type="AudioStream" uid="uid://dqvid1jusyjl0" path="res://Solution/Sounds/SwordHits/impactMetal_medium_001.ogg" id="8_m7jcd"]
+[ext_resource type="AudioStream" uid="uid://b0dscprc6cb0v" path="res://Solution/Sounds/SwordHits/impactMetal_medium_002.ogg" id="9_o1qyq"]
+[ext_resource type="AudioStream" uid="uid://424o7q0rmm66" path="res://Solution/Sounds/SwordHits/impactMetal_medium_003.ogg" id="10_b2qb7"]
+[ext_resource type="AudioStream" uid="uid://q05lgojlf6o6" path="res://Solution/Sounds/SwordHits/impactMetal_medium_004.ogg" id="11_lv8fw"]
+
+[node name="SfxSystem" type="Node"]
+script = ExtResource("1_gl7ll")
+
+[node name="GrassSteps" type="Node" parent="."]
+
+[node name="GrassStep0" type="AudioStreamPlayer" parent="GrassSteps"]
+stream = ExtResource("2_30v1n")
+bus = &"FootSteps"
+
+[node name="GrassStep1" type="AudioStreamPlayer" parent="GrassSteps"]
+stream = ExtResource("3_2stu4")
+bus = &"FootSteps"
+
+[node name="GrassStep2" type="AudioStreamPlayer" parent="GrassSteps"]
+stream = ExtResource("4_qdu3e")
+bus = &"FootSteps"
+
+[node name="GrassStep3" type="AudioStreamPlayer" parent="GrassSteps"]
+stream = ExtResource("5_gb6oy")
+bus = &"FootSteps"
+
+[node name="GrassStep4" type="AudioStreamPlayer" parent="GrassSteps"]
+stream = ExtResource("6_wh1ff")
+bus = &"FootSteps"
+
+[node name="SwordHits" type="Node" parent="."]
+
+[node name="SwordHit0" type="AudioStreamPlayer" parent="SwordHits"]
+stream = ExtResource("7_mhr5l")
+bus = &"FightSounds"
+
+[node name="SwordHit1" type="AudioStreamPlayer" parent="SwordHits"]
+stream = ExtResource("8_m7jcd")
+bus = &"FightSounds"
+
+[node name="SwordHit2" type="AudioStreamPlayer" parent="SwordHits"]
+stream = ExtResource("9_o1qyq")
+bus = &"FightSounds"
+
+[node name="SwordHit3" type="AudioStreamPlayer" parent="SwordHits"]
+stream = ExtResource("10_b2qb7")
+bus = &"FightSounds"
+
+[node name="SwordHit4" type="AudioStreamPlayer" parent="SwordHits"]
+stream = ExtResource("11_lv8fw")
+bus = &"FightSounds"
+
+[connection signal="finished" from="GrassSteps/GrassStep0" to="." method="_on_grass_step_0_finished"]
+[connection signal="finished" from="GrassSteps/GrassStep1" to="." method="_on_grass_step_1_finished"]
+[connection signal="finished" from="GrassSteps/GrassStep2" to="." method="_on_grass_step_2_finished"]
+[connection signal="finished" from="GrassSteps/GrassStep3" to="." method="_on_grass_step_3_finished"]
+[connection signal="finished" from="GrassSteps/GrassStep4" to="." method="_on_grass_step_4_finished"]

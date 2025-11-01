@@ -4,7 +4,7 @@ class_name Player
 @export var animation_player := AnimationPlayer
 @export var life : int = 3
 @onready var animation_manager : AnimationManager = $AnimationManager
-@onready var foot_steps : FootSteps = $FootSteps
+@onready var sfx_system : SfxSystem = $SfxSystem
 
 const SPEED = 300.0
 var can_move : bool = true
@@ -18,11 +18,11 @@ func _physics_process(delta: float) -> void:
 	if direction && can_move:
 		velocity.x = direction.x * SPEED
 		velocity.y = direction.y * SPEED
-		foot_steps.play()
+		sfx_system.play_grass_steps()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-		foot_steps.stop()
+		sfx_system.stop_grass_steps()
 	velocity.normalized()
 	
 	
@@ -36,6 +36,7 @@ func set_can_move(value: bool):
 func attacking():
 	if Input.is_action_just_pressed("attack"):
 		is_attacking = true
+		sfx_system.play_sword_hit()
 
 func guarding():
 	if Input.is_action_pressed("guard"):
@@ -48,6 +49,7 @@ func guarding():
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "attack1_left" || "attack1_right":
 		is_attacking = false
+		sfx_system.is_playing_sword = false
 
 
 func _on_hurt_area_area_entered(area: Area2D) -> void:
