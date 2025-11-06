@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://vcoflov16g4p"]
+[gd_scene load_steps=13 format=3 uid="uid://vcoflov16g4p"]
 
 [ext_resource type="Script" uid="uid://64ejsry0hsv6" path="res://Solution/Sounds/SfxSystem.gd" id="1_gl7ll"]
 [ext_resource type="AudioStream" uid="uid://buwwnqay5gkgq" path="res://Solution/Sounds/FootSteps Grass/footstep_grass_000.ogg" id="2_30v1n"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://b0dscprc6cb0v" path="res://Solution/Sounds/SwordHits/impactMetal_medium_002.ogg" id="9_o1qyq"]
 [ext_resource type="AudioStream" uid="uid://424o7q0rmm66" path="res://Solution/Sounds/SwordHits/impactMetal_medium_003.ogg" id="10_b2qb7"]
 [ext_resource type="AudioStream" uid="uid://q05lgojlf6o6" path="res://Solution/Sounds/SwordHits/impactMetal_medium_004.ogg" id="11_lv8fw"]
+[ext_resource type="AudioStream" uid="uid://duwrv1bg1fv3l" path="res://Solution/Sounds/metalLatch.ogg" id="12_30v1n"]
 
 [node name="SfxSystem" type="Node"]
 script = ExtResource("1_gl7ll")
@@ -59,8 +60,13 @@ bus = &"FightSounds"
 stream = ExtResource("11_lv8fw")
 bus = &"FightSounds"
 
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_30v1n")
+bus = &"FightSounds"
+
 [connection signal="finished" from="GrassSteps/GrassStep0" to="." method="_on_grass_step_0_finished"]
 [connection signal="finished" from="GrassSteps/GrassStep1" to="." method="_on_grass_step_1_finished"]
 [connection signal="finished" from="GrassSteps/GrassStep2" to="." method="_on_grass_step_2_finished"]
 [connection signal="finished" from="GrassSteps/GrassStep3" to="." method="_on_grass_step_3_finished"]
 [connection signal="finished" from="GrassSteps/GrassStep4" to="." method="_on_grass_step_4_finished"]
+[connection signal="finished" from="HitSound" to="." method="_on_hit_sound_finished"]

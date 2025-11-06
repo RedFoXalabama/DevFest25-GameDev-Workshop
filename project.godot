@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="DevFest25 GameDev Workshop"
-run/main_scene="uid://kxrmmd5eyav8"
+run/main_scene="uid://dup4ky5yuis04"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
 
 [dotnet]
 
@@ -30,6 +35,7 @@ folder_colors={
 "res://Solution/CombatSystem/": "red",
 "res://Solution/Interaction/": "yellow",
 "res://Solution/Sounds/": "purple",
+"res://Solution/UI/": "teal",
 "res://Solution/WorldBuilding/": "green"
 }
 
@@ -60,5 +66,6 @@ interact={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

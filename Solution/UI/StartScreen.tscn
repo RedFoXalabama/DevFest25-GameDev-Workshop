@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://dup4ky5yuis04"]
+
+[ext_resource type="PackedScene" uid="uid://dbn8mnyyvf4os" path="res://Solution/UI/Island.tscn" id="1_6ufsv"]
+[ext_resource type="Script" uid="uid://cw2h4u4ljvjwg" path="res://Solution/UI/start_screen.gd" id="1_fjkdr"]
+[ext_resource type="PackedScene" uid="uid://chl52fql24j05" path="res://Solution/WorldBuilding/Buildings/Gate.tscn" id="2_xf46f"]
+[ext_resource type="PackedScene" uid="uid://rl153jcqix3b" path="res://Solution/WorldBuilding/Buildings/Tower.tscn" id="3_m2t7b"]
+[ext_resource type="Theme" uid="uid://ctfc1i3e80gx5" path="res://Solution/UI/UITheme.tres" id="4_payub"]
+[ext_resource type="AudioStream" uid="uid://o6ggkg6exqla" path="res://Solution/Sounds/Water&Bird.wav" id="6_e4b4g"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fjkdr")
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_6ufsv")]
+
+[node name="Gate" parent="." instance=ExtResource("2_xf46f")]
+position = Vector2(576, 192)
+
+[node name="Tower" parent="." instance=ExtResource("3_m2t7b")]
+position = Vector2(335, 272)
+metadata/_edit_lock_ = true
+
+[node name="Tower2" parent="." instance=ExtResource("3_m2t7b")]
+position = Vector2(815, 272)
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 28.0
+offset_right = 96.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_payub")
+text = "Play"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_e4b4g")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

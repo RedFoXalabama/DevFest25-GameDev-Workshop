@@ -56,9 +56,10 @@ func _on_hurt_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy hitbox"):
 		if life > 1: 
 			animation_manager.get_damage()
+			sfx_system.play_hit_sound()
 			life -= 1
 		elif life == 1:
 			animation_manager.death_animation()
 
 func _on_animation_manager_death_signal() -> void:
-	pass
+	get_tree().change_scene_to_file("res://Solution/UI/EndScreen.tscn")

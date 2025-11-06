@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsffd0vylv386"]
+[gd_scene load_steps=3 format=3 uid="uid://dsffd0vylv386"]
 
-[ext_resource type="FontFile" uid="uid://dc28dtmvu4osb" path="res://Solution/Interaction/Assets/MedievalSharp-Bold.ttf" id="1_1heqv"]
 [ext_resource type="Script" uid="uid://b5twydqo4ul4u" path="res://Solution/Interaction/NPC/dialog_system.gd" id="1_tlbqc"]
-
-[sub_resource type="Theme" id="Theme_tlbqc"]
-Label/fonts/font = ExtResource("1_1heqv")
+[ext_resource type="Theme" uid="uid://ctfc1i3e80gx5" path="res://Solution/UI/UITheme.tres" id="2_tlbqc"]
 
 [node name="DialogSystem" type="Control"]
 layout_mode = 3
@@ -27,6 +24,7 @@ offset_top = -136.0
 offset_right = 320.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("2_tlbqc")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
@@ -39,5 +37,5 @@ offset_top = -0.048000336
 offset_bottom = 0.023994446
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_tlbqc")
+theme = ExtResource("2_tlbqc")
 text = "Testo PlaceHolder"

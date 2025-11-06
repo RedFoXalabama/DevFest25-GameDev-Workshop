@@ -1,0 +1,53 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ctfc1i3e80gx5"]
+
+[ext_resource type="FontFile" uid="uid://dc28dtmvu4osb" path="res://Solution/Interaction/Assets/MedievalSharp-Bold.ttf" id="1_81w7k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ciisy"]
+bg_color = Color(0.9372549, 0.88235295, 0.67058825, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.90588236, 0.38039216, 0.38039216, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_81w7k"]
+bg_color = Color(0.90588236, 0.38039216, 0.38039216, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9372549, 0.88235295, 0.67058825, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlbqc"]
+bg_color = Color(0.8627451, 0.6666667, 0.27450982, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 25
+Button/fonts/font = ExtResource("1_81w7k")
+Button/styles/hover = SubResource("StyleBoxFlat_ciisy")
+Button/styles/normal = SubResource("StyleBoxFlat_81w7k")
+Button/styles/pressed = SubResource("StyleBoxFlat_81w7k")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_81w7k")
+Panel/styles/panel = SubResource("StyleBoxFlat_tlbqc")

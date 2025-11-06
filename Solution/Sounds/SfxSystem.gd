@@ -5,6 +5,7 @@ var rng = RandomNumberGenerator.new()
 
 @onready var grass_steps : Node = $GrassSteps
 @onready var sword_hits : Node = $SwordHits
+@onready var hitsound : AudioStreamPlayer = $HitSound
 var audio_steps : Array[AudioStreamPlayer] = []
 var audio_sword : Array[AudioStreamPlayer] = []
 
@@ -56,17 +57,20 @@ var is_playing_sword : bool = false
 
 func random_sword():
 	var hit = rng.randi_range(0,4)
-	#while hit == value:
-		#hit = rng.randi_range(0,4)
 	audio_sword[hit].play()
 		
 func play_sword_hit():
-	#can_play_sword = true
 	if !is_playing_sword:
 		is_playing_sword = true
 		random_sword()
 
-func stop_sword_hit():
-	pass
-	#can_play_sword = false
-	#is_playing_sword = false
+
+var is_playing_hit : bool = false
+
+func play_hit_sound():
+	if !is_playing_hit:
+		is_playing_hit = true
+		hitsound.play()
+
+func _on_hit_sound_finished() -> void:
+	is_playing_hit = false

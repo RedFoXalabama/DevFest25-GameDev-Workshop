@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuet6v4pu0kb5"]
+
+[ext_resource type="TileSet" uid="uid://brpb4ax0bgb78" path="res://Solution/WorldBuilding/TileMaps/TileSets.tres" id="1_li1aa"]
+
+[node name="TileMapLayer" type="Node2D"]
+position = Vector2(1, 0)
+
+[node name="Ground" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_li1aa")
+
+[node name="Bush" type="TileMapLayer" parent="."]

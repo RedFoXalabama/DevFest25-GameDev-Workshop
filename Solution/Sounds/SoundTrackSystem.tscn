@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhofr07wnxkc5"]
+
+[ext_resource type="AudioStream" uid="uid://bbs4t5fvwpufp" path="res://Solution/Sounds/SoundTracks/Sad Town.ogg" id="1_3cabw"]
+[ext_resource type="Script" uid="uid://c7t4ksblxaah2" path="res://Solution/Sounds/sound_track_system.gd" id="1_pt6a7"]
+[ext_resource type="AudioStream" uid="uid://du6riy2fl71dm" path="res://Solution/Sounds/SoundTracks/Mission Plausible.ogg" id="2_pt6a7"]
+
+[node name="SoundTrackSystem" type="Node"]
+script = ExtResource("1_pt6a7")
+
+[node name="Village" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_3cabw")
+bus = &"SoundTrack"
+
+[node name="Fight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_pt6a7")
+bus = &"SoundTrack"
