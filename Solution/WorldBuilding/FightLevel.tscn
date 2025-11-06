@@ -1,16 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjbt36gcksj5i"]
+[gd_scene load_steps=5 format=3 uid="uid://cjbt36gcksj5i"]
 
+[ext_resource type="Script" uid="uid://bgnwtr1jtt82v" path="res://Solution/WorldBuilding/fight_level.gd" id="1_d41vf"]
 [ext_resource type="PackedScene" uid="uid://dvbr15ptsk1h2" path="res://Solution/CombatSystem/Characters/Player/Player.tscn" id="2_yeoyg"]
 [ext_resource type="PackedScene" uid="uid://bxy5dcn6gbi3c" path="res://Solution/CombatSystem/Characters/Enemy/Enemy.tscn" id="3_l005a"]
 [ext_resource type="PackedScene" uid="uid://dhofr07wnxkc5" path="res://Solution/Sounds/SoundTrackSystem.tscn" id="4_d41vf"]
 
 [node name="FightLevel" type="Node2D"]
+script = ExtResource("1_d41vf")
 
 [node name="Player" parent="." instance=ExtResource("2_yeoyg")]
-position = Vector2(272, 320)
+position = Vector2(512, 448)
 
-[node name="Enemy" parent="." instance=ExtResource("3_l005a")]
-position = Vector2(896, 320)
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("3_l005a")]
+position = Vector2(528, 80)
+life = 1
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("3_l005a")]
+position = Vector2(992, 464)
+life = 1
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("3_l005a")]
+position = Vector2(960, 96)
+life = 1
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("3_l005a")]
+position = Vector2(96, 480)
+life = 1
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource("3_l005a")]
+position = Vector2(128, 96)
+life = 1
 
 [node name="SoundTrackSystem" parent="." instance=ExtResource("4_d41vf")]
 soundtrack_name = "Fight"

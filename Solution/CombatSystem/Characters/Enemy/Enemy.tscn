@@ -231,6 +231,7 @@ radius = 80.0
 
 [node name="Enemy" instance=ExtResource("1_1nkss")]
 script = ExtResource("2_3jqfy")
+life = null
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_s26kb")

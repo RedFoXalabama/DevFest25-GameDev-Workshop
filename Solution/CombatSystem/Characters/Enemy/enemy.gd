@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal killed
+
 @export var life : int = 1
 const SPEED = 100.0
 var can_move : bool = true
@@ -43,6 +45,7 @@ func _on_hurt_area_area_entered(area: Area2D) -> void:
 			animation_manager.death_animation()
 
 func _on_animation_manager_death_signal() -> void:
+	emit_signal("killed")
 	queue_free()
 
 func attack():
