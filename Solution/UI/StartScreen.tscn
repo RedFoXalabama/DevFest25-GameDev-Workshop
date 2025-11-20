@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dup4ky5yuis04"]
 
-[ext_resource type="PackedScene" uid="uid://dbn8mnyyvf4os" path="res://Solution/UI/Island.tscn" id="1_6ufsv"]
+[ext_resource type="PackedScene" uid="uid://dbn8mnyyvf4os" path="res://Solution/WorldBuilding/TileMaps/Island.tscn" id="1_6ufsv"]
 [ext_resource type="Script" uid="uid://cw2h4u4ljvjwg" path="res://Solution/UI/start_screen.gd" id="1_fjkdr"]
 [ext_resource type="PackedScene" uid="uid://chl52fql24j05" path="res://Solution/WorldBuilding/Buildings/Gate.tscn" id="2_xf46f"]
 [ext_resource type="PackedScene" uid="uid://rl153jcqix3b" path="res://Solution/WorldBuilding/Buildings/Tower.tscn" id="3_m2t7b"]

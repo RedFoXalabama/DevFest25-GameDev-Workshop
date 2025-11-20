@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Sad Town.ogg-2890ab7f7c77e8bc9841eded4f6cb9f6
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

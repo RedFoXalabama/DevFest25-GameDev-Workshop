@@ -207,8 +207,8 @@ shape = SubResource("RectangleShape2D_s43an")
 tree_root = SubResource("AnimationNodeStateMachine_s43an")
 
 [node name="Camera2D" type="Camera2D" parent="." index="7"]
-limit_left = 0
-limit_top = 0
+limit_left = -500
+limit_top = -500
 editor_draw_limits = true
 
 [node name="SfxSystem" parent="." index="8" instance=ExtResource("4_q347e")]

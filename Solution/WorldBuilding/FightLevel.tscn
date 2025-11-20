@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjbt36gcksj5i"]
+[gd_scene load_steps=6 format=3 uid="uid://cjbt36gcksj5i"]
 
 [ext_resource type="Script" uid="uid://bgnwtr1jtt82v" path="res://Solution/WorldBuilding/fight_level.gd" id="1_d41vf"]
 [ext_resource type="PackedScene" uid="uid://dvbr15ptsk1h2" path="res://Solution/CombatSystem/Characters/Player/Player.tscn" id="2_yeoyg"]
+[ext_resource type="PackedScene" uid="uid://cuet6v4pu0kb5" path="res://Solution/WorldBuilding/TileMaps/OutsideVillage.tscn" id="3_4chd1"]
 [ext_resource type="PackedScene" uid="uid://bxy5dcn6gbi3c" path="res://Solution/CombatSystem/Characters/Enemy/Enemy.tscn" id="3_l005a"]
 [ext_resource type="PackedScene" uid="uid://dhofr07wnxkc5" path="res://Solution/Sounds/SoundTrackSystem.tscn" id="4_d41vf"]
 
@@ -10,6 +11,8 @@ script = ExtResource("1_d41vf")
 
 [node name="Player" parent="." instance=ExtResource("2_yeoyg")]
 position = Vector2(512, 448)
+
+[node name="TileMapLayer" parent="." instance=ExtResource("3_4chd1")]
 
 [node name="Enemies" type="Node" parent="."]
 

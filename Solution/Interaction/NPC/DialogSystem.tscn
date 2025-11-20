@@ -39,3 +39,4 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_tlbqc")
 text = "Testo PlaceHolder"
+autowrap_mode = 3

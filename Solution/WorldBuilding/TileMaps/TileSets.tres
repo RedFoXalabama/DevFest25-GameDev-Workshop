@@ -1,8 +1,10 @@
-[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://brpb4ax0bgb78"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://brpb4ax0bgb78"]
 
 [ext_resource type="Texture2D" uid="uid://cqdwep2iu8ouo" path="res://Solution/WorldBuilding/Assets/Decorations/Bushe1.png" id="1_smphw"]
 [ext_resource type="Texture2D" uid="uid://uvnf4r007jo0" path="res://Solution/WorldBuilding/Assets/Tilemap_color1.png" id="2_x0ok2"]
 [ext_resource type="Texture2D" uid="uid://c85vtoadk14sq" path="res://Solution/WorldBuilding/Assets/Water Background color.png" id="3_x0ok2"]
+[ext_resource type="Texture2D" uid="uid://cqlqtxdx6kvri" path="res://Solution/WorldBuilding/Assets/Decorations/Tree1.png" id="4_kvhsw"]
+[ext_resource type="Texture2D" uid="uid://gupi50fl05uv" path="res://Solution/WorldBuilding/Assets/Decorations/Rock2.png" id="5_fo6di"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wdqmv"]
 texture = ExtResource("1_smphw")
@@ -147,6 +149,19 @@ texture = ExtResource("3_x0ok2")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fo6di"]
+texture = ExtResource("4_kvhsw")
+margins = Vector2i(32, 48)
+texture_region_size = Vector2i(128, 192)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, 96, -48, 32, 48, 32, 48, 96)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cxm6d"]
+texture = ExtResource("5_fo6di")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32, 32, -32)
+
 [resource]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
@@ -154,3 +169,5 @@ physics_layer_0/collision_mask = 3
 sources/1 = SubResource("TileSetAtlasSource_3ul32")
 sources/0 = SubResource("TileSetAtlasSource_wdqmv")
 sources/2 = SubResource("TileSetAtlasSource_kvhsw")
+sources/4 = SubResource("TileSetAtlasSource_fo6di")
+sources/5 = SubResource("TileSetAtlasSource_cxm6d")
