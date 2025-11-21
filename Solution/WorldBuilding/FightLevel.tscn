@@ -14,6 +14,7 @@ script = ExtResource("1_d41vf")
 
 [node name="Player" parent="." instance=ExtResource("2_yeoyg")]
 position = Vector2(2304, 3712)
+life = 6
 
 [node name="Enemies" type="Node" parent="."]
 

@@ -10,9 +10,9 @@ script = ExtResource("1_pt6a7")
 [node name="Village" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_3cabw")
 bus = &"SoundTrack"
-parameters/looping = false
+parameters/looping = true
 
 [node name="Fight" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_pt6a7")
 bus = &"SoundTrack"
-parameters/looping = false
+parameters/looping = true
