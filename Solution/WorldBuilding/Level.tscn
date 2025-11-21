@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://kxrmmd5eyav8"]
+[gd_scene load_steps=8 format=4 uid="uid://kxrmmd5eyav8"]
 
 [ext_resource type="PackedScene" uid="uid://dvbr15ptsk1h2" path="res://Solution/CombatSystem/Characters/Player/Player.tscn" id="3_jbkhk"]
 [ext_resource type="PackedScene" uid="uid://dqjdx17g48viv" path="res://Solution/Interaction/NPC/NPC.tscn" id="5_3ly68"]
 [ext_resource type="TileSet" uid="uid://brpb4ax0bgb78" path="res://Solution/WorldBuilding/TileMaps/TileSets.tres" id="5_e3hex"]
+[ext_resource type="PackedScene" uid="uid://bxy5dcn6gbi3c" path="res://Solution/CombatSystem/Characters/Enemy/Enemy.tscn" id="5_yrvye"]
 [ext_resource type="PackedScene" uid="uid://dsffd0vylv386" path="res://Solution/Interaction/NPC/DialogSystem.tscn" id="6_e3hex"]
 [ext_resource type="PackedScene" uid="uid://0w8qp1rddvvt" path="res://Solution/WorldBuilding/TileMaps/Village.tscn" id="8_lipp3"]
 [ext_resource type="PackedScene" uid="uid://dhofr07wnxkc5" path="res://Solution/Sounds/SoundTrackSystem.tscn" id="8_v1ojk"]
@@ -15,40 +16,50 @@
 player = NodePath("../../Player")
 
 [node name="Village" parent="." instance=ExtResource("8_lipp3")]
-position = Vector2(128, 128)
+position = Vector2(2688, 0)
 
 [node name="NPC" parent="." node_paths=PackedStringArray("dialogSystem") instance=ExtResource("5_3ly68")]
-position = Vector2(864, 832)
+position = Vector2(3424, 704)
 dialogSystem = NodePath("../UI/DialogSystem")
 dialog = "Ad elisa puzzano i piedi"
 
-[node name="NPC5" parent="." node_paths=PackedStringArray("dialogSystem") instance=ExtResource("5_3ly68")]
-position = Vector2(1248, 480)
+[node name="NPC6" parent="." node_paths=PackedStringArray("dialogSystem") instance=ExtResource("5_3ly68")]
+position = Vector2(3808, 352)
 dialogSystem = NodePath("../UI/DialogSystem")
 dialog = "Valoroso cavaliere, la cittá ti chiede aiutarci con la minaccia dei cavaglieri oscuri che imperversa oltre le mura."
 
+[node name="NPC5" parent="." node_paths=PackedStringArray("dialogSystem") instance=ExtResource("5_3ly68")]
+position = Vector2(352, 448)
+dialogSystem = NodePath("../UI/DialogSystem")
+dialog = "Combatti contro il malvagio cavaliere nero:
+- Z per attaccare
+- X per difenderti"
+
 [node name="NPC2" parent="." node_paths=PackedStringArray("dialogSystem") instance=ExtResource("5_3ly68")]
-position = Vector2(1184, 864)
+position = Vector2(3744, 736)
 dialogSystem = NodePath("../UI/DialogSystem")
 dialog = "Mi hanno lasciato qui in punizione."
 
 [node name="NPC3" parent="." node_paths=PackedStringArray("dialogSystem") instance=ExtResource("5_3ly68")]
-position = Vector2(2176, 1152)
+position = Vector2(4736, 1024)
 dialogSystem = NodePath("../UI/DialogSystem")
 dialog = "Ogni tanto vengo qui per pensare."
 
 [node name="NPC4" parent="." node_paths=PackedStringArray("dialogSystem") instance=ExtResource("5_3ly68")]
-position = Vector2(480, 160)
+position = Vector2(3040, 32)
 dialogSystem = NodePath("../UI/DialogSystem")
 dialog = "Sicuramente un dialogo più utile di quelli di Pokemon."
 
 [node name="Player" parent="." instance=ExtResource("3_jbkhk")]
-position = Vector2(1184, 576)
+position = Vector2(0, 544)
 motion_mode = 0
 
+[node name="Enemy" parent="." instance=ExtResource("5_yrvye")]
+position = Vector2(1600, 544)
+life = 1
+
 [node name="Tree" type="TileMapLayer" parent="."]
-position = Vector2(128, 128)
-tile_map_data = PackedByteArray("AAAEAAEABAAAAAAAAAAGAAEABAAAAAAAAAAKAAEABAAAAAAAAAAMAAEABAAAAAAAAAAUAAEABAAAAAAAAAAWAAEABAAAAAAAAAAaAAEABAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAuAAAABAAAAAAAAAAwAAAABAAAAAAAAAA0AAAABAAAAAAAAAA2AAAABAAAAAAAAAA+AAAABAAAAAAAAABAAAAABAAAAAAAAABEAAAABAAAAAAAAAANAAEABAAAAAAAAAANAAIABAAAAAAAAAANAAMABAAAAAAAAAANAAQABAAAAAAAAAANAAUABAAAAAAAAAANAAoABAAAAAAAAAANAAsABAAAAAAAAAANAAwABAAAAAAAAAANAA0ABAAAAAAAAAANAA4ABAAAAAAAAAAOAAEABAAAAAAAAAAOAAoABAAAAAAAAAAOAAsABAAAAAAAAAAOAAwABAAAAAAAAAAOAA0ABAAAAAAAAAAOAA4ABAAAAAAAAAAPAAEABAAAAAAAAAAPAA0ABAAAAAAAAAAPAA4ABAAAAAAAAAAQAAEABAAAAAAAAAAQAA0ABAAAAAAAAAAQAA4ABAAAAAAAAAARAAEABAAAAAAAAAARAA0ABAAAAAAAAAARAA4ABAAAAAAAAAASAAEABAAAAAAAAAASAA0ABAAAAAAAAAASAA4ABAAAAAAAAAATAAEABAAAAAAAAAATAAIABAAAAAAAAAATAA0ABAAAAAAAAAATAA4ABAAAAAAAAAAUAAEABAAAAAAAAAAUAAIABAAAAAAAAAAUAA0ABAAAAAAAAAAUAA4ABAAAAAAAAAAVAAEABAAAAAAAAAAVAAIABAAAAAAAAAAVAA0ABAAAAAAAAAAVAA4ABAAAAAAAAAAWAAEABAAAAAAAAAAWAAIABAAAAAAAAAAWAA0ABAAAAAAAAAAWAA4ABAAAAAAAAAAXAAEABAAAAAAAAAAXAAIABAAAAAAAAAAXAA0ABAAAAAAAAAAXAA4ABAAAAAAAAAAYAAEABAAAAAAAAAAYAAIABAAAAAAAAAAYAA0ABAAAAAAAAAAYAA4ABAAAAAAAAAAZAAEABAAAAAAAAAAZAAIABAAAAAAAAAAZAA0ABAAAAAAAAAAZAA4ABAAAAAAAAAAaAAEABAAAAAAAAAAaAAIABAAAAAAAAAAaAA0ABAAAAAAAAAAaAA4ABAAAAAAAAAAbAAEABAAAAAAAAAAbAAIABAAAAAAAAAAbAAMABAAAAAAAAAAbAAQABAAAAAAAAAAbAAUABAAAAAAAAAAbAAoABAAAAAAAAAAbAAsABAAAAAAAAAAbAAwABAAAAAAAAAAbAA0ABAAAAAAAAAAbAA4ABAAAAAAAAAAcAAEABAAAAAAAAAAcAAIABAAAAAAAAAAcAAMABAAAAAAAAAAcAAQABAAAAAAAAAAcAAUABAAAAAAAAAAcAAoABAAAAAAAAAAcAAsABAAAAAAAAAAcAAwABAAAAAAAAAAcAA0ABAAAAAAAAAAcAA4ABAAAAAAAAAAOAAIABAAAAAAAAAAOAAMABAAAAAAAAAAOAAQABAAAAAAAAAAOAAUABAAAAAAAAAAPAAIABAAAAAAAAAAQAAIABAAAAAAAAAARAAIABAAAAAAAAAASAAIABAAAAAAAAAD+/wQABAAAAAAAAAD+/wUABAAAAAAAAAD+/wYABAAAAAAAAAD+/wcABAAAAAAAAAD+/wgABAAAAAAAAAD+/wkABAAAAAAAAAD+/woABAAAAAAAAAD+/wsABAAAAAAAAAD//wQABAAAAAAAAAAAAAQABAAAAAAAAAABAAQABAAAAAAAAAACAAQABAAAAAAAAAADAAQABAAAAAAAAAAEAAQABAAAAAAAAAAFAAQABAAAAAAAAAAGAAQABAAAAAAAAAAGAAUABAAAAAAAAAAGAAoABAAAAAAAAAAGAAsABAAAAAAAAAD//wsABAAAAAAAAAAAAAsABAAAAAAAAAABAAsABAAAAAAAAAACAAsABAAAAAAAAAADAAsABAAAAAAAAAAEAAsABAAAAAAAAAAFAAsABAAAAAAAAAAxAAcABAAAAAAAAAA0AAcABAAAAAAAAAAxAA0ABAAAAAAAAAA0AA0ABAAAAAAAAABAAA0ABAAAAAAAAABDAA0ABAAAAAAAAABDAAcABAAAAAAAAABAAAcABAAAAAAAAAA4AA8ABAAAAAAAAAA8AA8ABAAAAAAAAAA=")
 tile_set = ExtResource("5_e3hex")
 
 [node name="SoundTrackSystem" parent="." instance=ExtResource("8_v1ojk")]

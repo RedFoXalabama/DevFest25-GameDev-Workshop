@@ -6,7 +6,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s26kb"]
 resource_local_to_scene = true
-size = Vector2(84, 112)
+size = Vector2(50, 50)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rfr4i"]
 animation = &"attack1_right"
@@ -231,7 +231,6 @@ radius = 80.0
 
 [node name="Enemy" instance=ExtResource("1_1nkss")]
 script = ExtResource("2_3jqfy")
-life = null
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_s26kb")

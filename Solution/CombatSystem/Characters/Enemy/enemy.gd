@@ -14,7 +14,7 @@ var player : CharacterBody2D = null
 @onready var animation_manager : AnimationManager = $AnimationManager
 @onready var timer: Timer = $Timer
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if player: 
 		var direction = (player.position - position).normalized()
 		if direction && can_move:

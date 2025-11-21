@@ -1,7 +1,6 @@
 extends CharacterBody2D
 class_name Player
 
-@export var animation_player := AnimationPlayer
 @export var life : int = 3
 @onready var animation_manager : AnimationManager = $AnimationManager
 @onready var sfx_system : SfxSystem = $SfxSystem
@@ -12,7 +11,7 @@ var direction : Vector2
 var is_attacking : bool
 var is_guarding : bool
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
 	if direction && can_move:
