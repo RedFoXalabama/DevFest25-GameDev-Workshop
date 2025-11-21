@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://chl52fql24j05"]
+[gd_scene load_steps=7 format=3 uid="uid://chl52fql24j05"]
 
 [ext_resource type="PackedScene" uid="uid://ukvgkxwddvm5" path="res://Solution/WorldBuilding/Buildings/GeneralBuilding.tscn" id="1_v3xeu"]
 [ext_resource type="Script" uid="uid://dmisla17g0m4" path="res://Solution/WorldBuilding/Buildings/Gate.gd" id="2_rmh58"]
 [ext_resource type="Texture2D" uid="uid://d0841kpgr7p5" path="res://Solution/WorldBuilding/Assets/Buildings/Castle.png" id="2_xq2mv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmh58"]
-size = Vector2(315, 188.5)
+size = Vector2(315, 176)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j5msa"]
 size = Vector2(32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tlpj"]
+size = Vector2(96, 32)
 
 [node name="Gate" instance=ExtResource("1_v3xeu")]
 script = ExtResource("2_rmh58")
@@ -17,7 +20,7 @@ script = ExtResource("2_rmh58")
 texture = ExtResource("2_xq2mv")
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(0, 1.75)
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_rmh58")
 
 [node name="InteractionArea" type="Area2D" parent="." index="2"]
@@ -25,6 +28,10 @@ shape = SubResource("RectangleShape2D_rmh58")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" index="0"]
 position = Vector2(0, 104)
 shape = SubResource("RectangleShape2D_j5msa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionArea" index="1"]
+position = Vector2(0, -96)
+shape = SubResource("RectangleShape2D_6tlpj")
 
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
