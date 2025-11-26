@@ -33,6 +33,7 @@ movie_writer/movie_file="C:/RedFoX Studio/Creator/Godot Projects/devfest25-gamed
 
 folder_colors={
 "res://Solution/CombatSystem/": "red",
+"res://Solution/Export/": "gray",
 "res://Solution/Interaction/": "yellow",
 "res://Solution/Sounds/": "purple",
 "res://Solution/UI/": "teal",
