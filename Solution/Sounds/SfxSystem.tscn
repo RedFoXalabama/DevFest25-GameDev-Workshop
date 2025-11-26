@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://b0dscprc6cb0v" path="res://Solution/Sounds/SwordHits/impactMetal_medium_002.ogg" id="9_o1qyq"]
 [ext_resource type="AudioStream" uid="uid://424o7q0rmm66" path="res://Solution/Sounds/SwordHits/impactMetal_medium_003.ogg" id="10_b2qb7"]
 [ext_resource type="AudioStream" uid="uid://q05lgojlf6o6" path="res://Solution/Sounds/SwordHits/impactMetal_medium_004.ogg" id="11_lv8fw"]
-[ext_resource type="AudioStream" uid="uid://duwrv1bg1fv3l" path="res://Solution/Sounds/metalLatch.ogg" id="12_30v1n"]
+[ext_resource type="AudioStream" uid="uid://duwrv1bg1fv3l" path="res://Solution/Sounds/HitSound/metalLatch.ogg" id="12_30v1n"]
 
 [node name="SfxSystem" type="Node"]
 script = ExtResource("1_gl7ll")

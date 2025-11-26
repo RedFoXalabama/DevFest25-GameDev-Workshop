@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://o6ggkg6exqla"
-path="res://.godot/imported/Water&Bird.wav-1908c2705ee3e79553b3dc176111bc2b.sample"
+path="res://.godot/imported/Water&Bird.wav-6566a4a2aeece286562c923739aab94c.sample"
 
 [deps]
 
-source_file="res://Solution/Sounds/Water&Bird.wav"
-dest_files=["res://.godot/imported/Water&Bird.wav-1908c2705ee3e79553b3dc176111bc2b.sample"]
+source_file="res://Solution/Sounds/WaterSound/Water&Bird.wav"
+dest_files=["res://.godot/imported/Water&Bird.wav-6566a4a2aeece286562c923739aab94c.sample"]
 
 [params]
 

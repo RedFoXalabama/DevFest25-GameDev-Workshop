@@ -168,7 +168,6 @@ advance_mode = 2
 advance_expression = "!is_attacking && !is_guarding"
 
 [resource]
-resource_local_to_scene = true
 states/Attack1/node = SubResource("AnimationNodeBlendSpace2D_ws0f7")
 states/Attack1/position = Vector2(523, 100)
 states/Guard/node = SubResource("AnimationNodeBlendSpace2D_1a17j")
@@ -178,4 +177,4 @@ states/Idle/position = Vector2(368, 100)
 states/Run/node = SubResource("AnimationNodeBlendSpace2D_xmnun")
 states/Run/position = Vector2(368, 184)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_xu4sk"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_dlmyr"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_tmk8h"), "Idle", "Guard", SubResource("AnimationNodeStateMachineTransition_4kuym"), "Guard", "Idle", SubResource("AnimationNodeStateMachineTransition_4p7t4"), "Idle", "Attack1", SubResource("AnimationNodeStateMachineTransition_f1hqg"), "Attack1", "Idle", SubResource("AnimationNodeStateMachineTransition_j5uyx"), "Run", "Attack1", SubResource("AnimationNodeStateMachineTransition_n7tw3"), "Attack1", "Run", SubResource("AnimationNodeStateMachineTransition_rfr4i")]
-graph_offset = Vector2(89, 49)
+graph_offset = Vector2(1, -21)

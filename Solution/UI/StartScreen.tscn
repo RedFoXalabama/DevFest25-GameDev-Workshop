@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://chl52fql24j05" path="res://Solution/WorldBuilding/Buildings/Gate.tscn" id="2_xf46f"]
 [ext_resource type="PackedScene" uid="uid://rl153jcqix3b" path="res://Solution/WorldBuilding/Buildings/Tower.tscn" id="3_m2t7b"]
 [ext_resource type="Theme" uid="uid://ctfc1i3e80gx5" path="res://Solution/UI/UITheme.tres" id="4_payub"]
-[ext_resource type="AudioStream" uid="uid://o6ggkg6exqla" path="res://Solution/Sounds/Water&Bird.wav" id="6_e4b4g"]
+[ext_resource type="AudioStream" uid="uid://o6ggkg6exqla" path="res://Solution/Sounds/WaterSound/Water&Bird.wav" id="6_e4b4g"]
 
 [node name="StartScreen" type="Control"]
 layout_mode = 3

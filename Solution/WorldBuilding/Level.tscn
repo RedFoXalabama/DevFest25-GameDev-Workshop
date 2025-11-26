@@ -26,7 +26,7 @@ dialog = "Ad elisa puzzano i piedi"
 [node name="NPC6" parent="." node_paths=PackedStringArray("dialogSystem") instance=ExtResource("5_3ly68")]
 position = Vector2(3808, 352)
 dialogSystem = NodePath("../UI/DialogSystem")
-dialog = "Valoroso cavaliere, la cittá ti chiede aiutarci con la minaccia dei cavaglieri oscuri che imperversa oltre le mura."
+dialog = "Valoroso cavaliere, la cittá ti chiede aiutarci con la minaccia dei cavalieri oscuri che imperversa oltre le mura."
 
 [node name="NPC5" parent="." node_paths=PackedStringArray("dialogSystem") instance=ExtResource("5_3ly68")]
 position = Vector2(352, 448)

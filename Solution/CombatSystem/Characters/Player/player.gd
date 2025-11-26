@@ -11,6 +11,7 @@ var direction : Vector2
 var is_attacking : bool
 var is_guarding : bool
 
+# MOVIMENTO
 func _physics_process(_delta: float) -> void:
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
@@ -32,6 +33,7 @@ func _physics_process(_delta: float) -> void:
 func set_can_move(value: bool):
 	can_move = value
 
+# ATTACCO E DIFESA
 func attacking():
 	if Input.is_action_just_pressed("attack"):
 		is_attacking = true
@@ -44,13 +46,13 @@ func guarding():
 	else :
 		is_guarding = false
 
-
+# ANIMAZIONE ATTACCO
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "attack1_left" || "attack1_right":
 		is_attacking = false
 		sfx_system.is_playing_sword = false
 
-
+# LOGICA DANNI
 func _on_hurt_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy hitbox"):
 		if life > 1: 

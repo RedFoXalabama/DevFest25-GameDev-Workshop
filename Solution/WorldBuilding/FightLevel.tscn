@@ -14,11 +14,11 @@ script = ExtResource("1_d41vf")
 
 [node name="Player" parent="." instance=ExtResource("2_yeoyg")]
 position = Vector2(2304, 3712)
-life = 6
+life = 20
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="Enemy" parent="Enemies" instance=ExtResource("3_l005a")]
+[node name="BigBoss" parent="Enemies" instance=ExtResource("3_l005a")]
 position = Vector2(2288, 1648)
 scale = Vector2(3, 3)
 life = 6

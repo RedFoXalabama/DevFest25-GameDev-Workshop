@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://ctfc1i3e80gx5" path="res://Solution/UI/UITheme.tres" id="2_mjv17"]
 [ext_resource type="Texture2D" uid="uid://dciclvfb5kto0" path="res://Solution/CombatSystem/Characters/Assets/Player/RedWarriorAnimations.png" id="4_rwyw3"]
 [ext_resource type="Texture2D" uid="uid://bpv2pqwp10xi8" path="res://Solution/CombatSystem/Characters/Assets/Enemy/BlackWarriorAnimations.png" id="5_q4hy0"]
-[ext_resource type="AudioStream" uid="uid://o6ggkg6exqla" path="res://Solution/Sounds/Water&Bird.wav" id="6_q4hy0"]
+[ext_resource type="AudioStream" uid="uid://o6ggkg6exqla" path="res://Solution/Sounds/WaterSound/Water&Bird.wav" id="6_q4hy0"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3

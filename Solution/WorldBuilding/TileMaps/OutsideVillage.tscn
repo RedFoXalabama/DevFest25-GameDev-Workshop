@@ -14,7 +14,6 @@ shader_parameter/tile = Vector2(5, 5)
 shader_parameter/offset = Vector2(0, 0)
 
 [node name="TileMapLayer" type="Node2D"]
-position = Vector2(1, 0)
 
 [node name="Water" type="TileMapLayer" parent="."]
 material = SubResource("ShaderMaterial_muqxs")

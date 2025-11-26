@@ -14,6 +14,7 @@ var player : CharacterBody2D = null
 @onready var animation_manager : AnimationManager = $AnimationManager
 @onready var timer: Timer = $Timer
 
+# MOVIMENTO IN BASE AL PLAYER
 func _physics_process(_delta: float) -> void:
 	if player: 
 		var direction = (player.position - position).normalized()
@@ -26,8 +27,6 @@ func _physics_process(_delta: float) -> void:
 
 	move_and_slide()
 
-	
-
 func _on_search_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		player = body
@@ -36,6 +35,7 @@ func _on_search_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		player = null
 
+# LOGICA DANNI
 func _on_hurt_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player hitbox"):
 		if life > 1:
@@ -44,10 +44,13 @@ func _on_hurt_area_area_entered(area: Area2D) -> void:
 		elif life == 1:
 			animation_manager.death_animation()
 
+
 func _on_animation_manager_death_signal() -> void:
 	emit_signal("killed")
 	queue_free()
 
+
+# ATTACK
 func attack():
 	is_attacking = true
 

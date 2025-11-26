@@ -43,8 +43,8 @@ radius = 128.0
 [node name="NPC" type="StaticBody2D"]
 script = ExtResource("1_uy301")
 dialog = "Vai a sconfiggere il cavagliere nero
-perché?
-perché é NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
+Perché?
+Perché é N...OOOOOOOOOO"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_rq26e")
